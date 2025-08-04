@@ -4,6 +4,7 @@
 - name: adduser {{ user_name }}
   user: 
     name: "{{ user_name }}"
+    shell: /bin/bash
 
 - name: authkey for {{ user_name }}
   authorized_key: 
