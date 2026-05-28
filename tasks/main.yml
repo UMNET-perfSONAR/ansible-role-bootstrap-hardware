@@ -2,13 +2,13 @@
 # tasks file for ansible-role-bastion
 
 - name: IP restriction config
-  include: etc-hosts.yml
+  include_tasks: etc-hosts.yml
   when:
     - bootstrap_jumpboxes is defined 
     - bootstrap_jumpboxes | length > 0
 
 - name: user setup
-  include: users.yml
+  include_tasks: users.yml
   when:
     - bootstrap_users is defined 
     - bootstrap_users | length > 0
